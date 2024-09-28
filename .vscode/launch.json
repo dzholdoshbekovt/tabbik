@@ -1,0 +1,78 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Production",
+            "request": "launch",
+            "type": "dart",
+            "program": "packages/app/lib/main_prod.dart",
+            "args": [
+                "--flavor",
+                "prod"
+            ],
+            "toolArgs": [
+                "--dart-define",
+                "TEST=false",
+            ]
+        },
+        {
+            "name": "Development",
+            "request": "launch",
+            "type": "dart",
+            "program": "packages/app/lib/main_dev.dart",
+            "args": [
+                "--flavor",
+                "dev"
+            ],
+            "toolArgs": [
+                "--dart-define",
+                "TEST=true",
+            ]
+        },
+        {
+            "name": "Development_test",
+            "request": "launch",
+            "type": "dart",
+            "program": "packages/app/lib/main_dev_test.dart",
+            "args": [
+                "--flavor",
+                "dev_test"
+            ],
+            "toolArgs": [
+                "--dart-define",
+                "TEST=true",
+            ]
+        },
+        {
+            "name": "Staging",
+            "request": "launch",
+            "type": "dart",
+            "program": "packages/app/lib/main_staging.dart",
+            "args": [
+                "--flavor",
+                "staging"
+            ],
+            "toolArgs": [
+                "--dart-define",
+                "TEST=false",
+            ]
+        },
+        {
+            "name": "Staging_test",
+            "request": "launch",
+            "type": "dart",
+            "program": "packages/app/lib/main_staging_test.dart",
+            "args": [
+                "--flavor",
+                "staging_test"
+            ],
+            "toolArgs": [
+                "--dart-define",
+                "TEST=true",
+            ]
+        }
+    ]
+}

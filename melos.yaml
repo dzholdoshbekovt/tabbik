@@ -1,0 +1,27 @@
+name: tabbik
+
+packages:
+  - packages/*
+  - packages/*/*
+
+scripts:
+  generate:flutter:all:
+    run: melos exec -c 10 --depends-on="build_runner" --ignore="app" --flutter -- "flutter pub run build_runner build --delete-conflicting-outputs"
+    description: Build all generated files for Flutter packages in this project.
+
+  generate:flutter:clean:
+    run: melos exec -c 10 --depends-on="build_runner" --flutter -- "flutter pub run build_runner clean"
+    description: Build all generated files for Flutter packages in this project.
+  generate:flutter:app:
+    run: melos exec -c 1 --depends-on="build_runner" --scope="app" --flutter -- "flutter pub run build_runner build --delete-conflicting-outputs"
+    description: Build all generated files for Flutter packages in this project.
+
+  build:apk:dev_test:
+    run: melos exec -c 1 --scope="app" --flutter -- "flutter build apk --split-per-abi --flavor dev_test -t lib/main_dev_test.dart --no-tree-shake-icons"
+
+  build:ipa:staging_test:
+    run: melos exec -c 1 --scope="app" --flutter -- "flutter build ipa --flavor staging_test -t lib/main_staging_test.dart --no-tree-shake-icons"
+
+  localization_keys_gen:
+    run: melos exec -c 5 "dart run ../../localization_generate/generate.dart -S assets/localization -f keys -O lib/logic/localization -o locale_keys.g.dart"
+    description: Generate localization keys

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/packages/app/melos_app.iml" filepath="$PROJECT_DIR$/packages/app/melos_app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/packages/auth/melos_auth.iml" filepath="$PROJECT_DIR$/packages/auth/melos_auth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/packages/club/melos_club.iml" filepath="$PROJECT_DIR$/packages/club/melos_club.iml" />
+      <module fileurl="file://$PROJECT_DIR$/packages/components/melos_components.iml" filepath="$PROJECT_DIR$/packages/components/melos_components.iml" />
+      <module fileurl="file://$PROJECT_DIR$/packages/core/melos_core.iml" filepath="$PROJECT_DIR$/packages/core/melos_core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/packages/theme/melos_theme.iml" filepath="$PROJECT_DIR$/packages/theme/melos_theme.iml" />
+      <module fileurl="file://$PROJECT_DIR$/melos_tabbik.iml" filepath="$PROJECT_DIR$/melos_tabbik.iml" />
+    </modules>
+  </component>
+</project>
