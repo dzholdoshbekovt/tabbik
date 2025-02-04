@@ -1,14 +1,12 @@
-import 'package:components/widgets/scaffold/custom_scaffold.dart';
 import 'package:core/feature_resolver.dart';
-import 'package:core/utils/exceptions/worker.dart';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+
 import 'package:go_router/go_router.dart';
 import 'package:theme/components/controllers.dart';
 import 'package:theme/components/main.dart';
-import 'package:theme/fonts/app_fonts.dart';
 
 class ScaffoldWithNavBar extends StatefulWidget {
   const ScaffoldWithNavBar({

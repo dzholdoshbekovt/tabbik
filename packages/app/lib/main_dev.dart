@@ -31,6 +31,5 @@ Future<void> main() async {
   // await configMain.setupFirebase();
   await configMain.setupDependecies();
   await configMain.setupStorage();
-
   await runner.main(configMain);
 }

@@ -13,8 +13,7 @@ import 'main.dart' as runner;
 
 Future<void> main() async {
   F.appFlavor = Flavor.prod;
-
-  String env = Environment.prod;
+  String env = Environment.dev;
 
   WidgetsFlutterBinding.ensureInitialized();
   await AppStorage.instance.initialize();
@@ -26,10 +25,10 @@ Future<void> main() async {
   ];
 
   ConfigMain configMain = ConfigMain(resolvers: resolvers, env: env);
+
   configMain.setupSystemSettings();
   // await configMain.setupFirebase();
   await configMain.setupDependecies();
   await configMain.setupStorage();
-
   await runner.main(configMain);
 }

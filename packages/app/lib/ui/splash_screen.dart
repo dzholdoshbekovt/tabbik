@@ -24,6 +24,7 @@ class _SplashScreenState extends State<SplashScreen> {
         AppState.of(context)?.setAuthState(AuthState.auth);
         // GoRouter.of(context).goNamed(RouteNames.auth);
       }
+      print('FUCK asdasd');
       GoRouter.of(context).goNamed(RouteNames.redirect);
     });
     super.initState();

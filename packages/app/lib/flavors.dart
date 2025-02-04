@@ -1,11 +1,6 @@
-// ignore_for_file: constant_identifier_names
-
 enum Flavor {
   prod,
-  staging,
-  staging_test,
   dev,
-  dev_test,
 }
 
 class F {
@@ -16,17 +11,12 @@ class F {
   static String get title {
     switch (appFlavor) {
       case Flavor.prod:
-        return 'RSK';
-      case Flavor.staging:
-        return 'RSK Staging';
-      case Flavor.staging_test:
-        return 'RSK Staging Test';
+        return 'Tabbik';
       case Flavor.dev:
-        return 'RSK Dev';
-      case Flavor.dev_test:
-        return 'RSK Dev Test';
+        return 'Tabbik Dev';
       default:
         return 'title';
     }
   }
+
 }

@@ -22,7 +22,7 @@ class CoreApi {
   Dio get auth => _auth;
 
   CoreApi(Config config) {
-    init(config.baseUrl, config.servicesUrl);
+    init(config.baseUrl);
   }
 
   final QueuedInterceptorsWrapper _baseInterceptor = QueuedInterceptorsWrapper(
@@ -32,20 +32,6 @@ class CoreApi {
     },
     onResponse: (e, handler) {
       handler.next(e);
-      // if (e.data is String) {
-      //   e.data = jsonDecode(e.data);
-      // }
-      // if (e.data['status'] == 'OK') {
-      //   e.data = e.data['body'];
-      //   handler.next(e);
-      // } else {
-      //   try {
-      //     throw ExceptionHandler.proccessException(e);
-      //   } catch (error) {
-      //     handler.reject(
-      //         DioException(error: error, requestOptions: e.requestOptions));
-      //   }
-      // }
     },
     onError: (e, handler) async {
       if (e.response?.statusCode == 401) {
@@ -97,17 +83,6 @@ class CoreApi {
     },
     onResponse: (e, handler) {
       handler.next(e);
-      // if (e.data['status'] == 'OK') {
-      //   e.data = e.data['body'];
-      //   handler.next(e);
-      // } else {
-      //   try {
-      //     throw ExceptionHandler.proccessAuthException(e);
-      //   } catch (error) {
-      //     handler.reject(
-      //         DioException(error: error, requestOptions: e.requestOptions));
-      //   }
-      // }
     },
     onError: (e, handler) {
       try {
@@ -135,7 +110,7 @@ class CoreApi {
     },
   );
 
-  Future<void> init(String baseUrl, String servicesUrl) async {
+  Future<void> init(String baseUrl) async {
     _base = Dio();
     _auth = Dio();
     _authUpload = Dio();

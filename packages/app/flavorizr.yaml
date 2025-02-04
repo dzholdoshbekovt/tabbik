@@ -1,0 +1,19 @@
+flavors:
+  prod:
+    app:
+      name: "Tabbik"
+    android:
+      applicationId: "kg.tabbik.prod"
+
+    ios:
+      bundleId: "kg.tabbik.prod"
+
+  dev:
+    app:
+      name: "Tabbik Dev"
+
+    android:
+      applicationId: "kg.tabbik.dev"
+    ios:
+      bundleId: "kg.tabbik.dev"
+      

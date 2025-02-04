@@ -9,17 +9,14 @@ import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 
 class CoreApiHelper {
-  static Future<RequestOptions> options(RequestOptions options,
-      {List<String>? ignoreUrlsJWT}) async {
+  static Future<RequestOptions> options(
+    RequestOptions options,
+  ) async {
     TokenModel? tokens;
     tokens = await SecureStorage.loadTokens();
 
     if (tokens?.accessToken != null) {
-      if (ignoreUrlsJWT == null) {
-        options.headers['authorization'] = 'Bearer ${tokens!.accessToken}';
-      } else if (!ignoreUrlsJWT.contains(options.path)) {
-        options.headers['authorization'] = 'Bearer ${tokens!.accessToken}';
-      }
+      options.headers['authorization'] = 'Bearer ${tokens!.accessToken}';
     }
 
     options.headers['Accept-Language'] = 'ru';

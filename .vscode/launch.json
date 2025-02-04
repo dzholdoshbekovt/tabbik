@@ -32,47 +32,5 @@
                 "TEST=true",
             ]
         },
-        {
-            "name": "Development_test",
-            "request": "launch",
-            "type": "dart",
-            "program": "packages/app/lib/main_dev_test.dart",
-            "args": [
-                "--flavor",
-                "dev_test"
-            ],
-            "toolArgs": [
-                "--dart-define",
-                "TEST=true",
-            ]
-        },
-        {
-            "name": "Staging",
-            "request": "launch",
-            "type": "dart",
-            "program": "packages/app/lib/main_staging.dart",
-            "args": [
-                "--flavor",
-                "staging"
-            ],
-            "toolArgs": [
-                "--dart-define",
-                "TEST=false",
-            ]
-        },
-        {
-            "name": "Staging_test",
-            "request": "launch",
-            "type": "dart",
-            "program": "packages/app/lib/main_staging_test.dart",
-            "args": [
-                "--flavor",
-                "staging_test"
-            ],
-            "toolArgs": [
-                "--dart-define",
-                "TEST=true",
-            ]
-        }
     ]
 }

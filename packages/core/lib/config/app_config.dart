@@ -31,6 +31,4 @@ class Config {
   bool get isTest => _baseUrl == Urls.baseUrlProd ? false : true;
   String get baseUrl => _baseUrl;
   String get baseUrlWithoutSlash => _baseUrl.substring(0, _baseUrl.length - 1);
-
-  String get servicesUrl => isTest ? Urls.servicesTest : Urls.servicesProd;
 }

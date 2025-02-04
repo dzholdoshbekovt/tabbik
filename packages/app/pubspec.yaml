@@ -1,12 +1,14 @@
 name: app
 description: "A new Flutter project."
 
-publish_to: "none"
+publish_to: 'none' 
+
 
 version: 1.0.0+1
 
 environment:
-  sdk: ">=3.3.1 <4.0.0"
+  sdk: ">=3.5.0 <4.0.0"
+
 
 dependencies:
   flutter:
@@ -46,28 +48,9 @@ dev_dependencies:
   flutter_lints: ^3.0.0
   injectable_generator: ^2.1.4
   build_runner: ^2.3.3
-  flutter_flavorizr: ^2.2.1
+  flutter_flavorizr: ^2.2.3
 
 flutter:
   uses-material-design: true
 
 
-flavorizr:
-  flavors:
-    prod:
-      app:
-        name: "Tabbik"
-      android:
-        applicationId: "kg.tabbik.prod"
-
-      ios:
-        bundleId: "kg.tabbik.prod"
-
-    dev:
-      app:
-        name: "Tabbik Dev"
-
-      android:
-        applicationId: "kg.tabbik.dev"
-      ios:
-        bundleId: "kg.tabbik.dev"
